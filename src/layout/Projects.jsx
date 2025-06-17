@@ -3,12 +3,12 @@ import "./Project.css"
 import hotelImage from "../assets/images/hotel.jpg"
 import quizAddQuetion from "../assets/images/quizAddQuetion.png"
 import quizHome from "../assets/images/quizHome.png"
-import adminDeposite from "../assets/images/adminPage.PNG"
-import bit from "../assets/images/bit.PNG"
-import dashBoardView from "../assets/images/dashBoardView.PNG"
-import classamigo from "../assets/images/classamigo.PNG"
+import adminDeposite from "../assets/images/adminPage.png"
+import bit from "../assets/images/bit.png"
+import dashBoardView from "../assets/images/dashBoardView.png"
+import classamigo from "../assets/images/classamigo.png"
 
-import createCourse from "../assets/images/createCourse.PNG"
+import createCourse from "../assets/images/createCourse.png"
 
 const Projects = () => {
 
