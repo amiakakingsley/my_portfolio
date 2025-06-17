@@ -1,0 +1,35 @@
+.play-page {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 100px;
+  font-style: normal;
+  padding: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 500;
+}
