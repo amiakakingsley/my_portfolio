@@ -2,7 +2,7 @@ import "./home.css"
 import NavBar from "../layout/Navbar.jsx"
 import profilePicture from "../assets/images/ok.jpg"
 
-import Projects from "../layout/projects.jsx";
+import Projects from "../layout/Projects.jsx";
 import Contact from "../layout/Contact.jsx";
 import { Link } from "react-router-dom";
 function Home(){
