@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
 
             <div className="socialMedia">
-              <a href="https://www.facebook.com/amiakakingsley"><i className="fa-brands fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/"><i className="fa-brands fa-facebook-f"></i></a>
               <a href="https://wa.me/2347046515316"><i className="fa-brands fa-whatsapp"></i></a>
               <a href="#"><i className="fa-brands fa-instagram"></i></a>
               <a href="#"><i className="fa-brands fa-telegram"></i></a>
