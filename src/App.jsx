@@ -17,7 +17,7 @@ function App() {
             <Route path="/explore" element={<Register/>} />
             <Route path="/components" element={<ComponentA />} />
             <Route path="/show_all_blogs" element={<DisplayBlog />} />
-            <Route path="/home" element={<Home/>} />
+            <Route path="/" element={<Home/>} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
          

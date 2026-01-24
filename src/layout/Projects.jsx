@@ -1,16 +1,16 @@
 
 import React from 'react'
 import "./Project.css"
-import hotelImage from "../assets/images/hotel.jpg"
-import quizAddQuetion from "../assets/images/quizAddQuetion.png"
-import quizHome from "../assets/images/quizHome.png"
-import adminDeposite from "../assets/images/adminPage.png"
-import bit from "../assets/images/bit.png"
-import dashBoardView from "../assets/images/dashBoardView.png"
-import classamigo from "../assets/images/classamigo.png"
+    import hotelImage from "../assets/images/hotel.jpg"
 
-import createCourse from "../assets/images/createCourse.png"
+    import quizHome from "../assets/images/quizHome.png"
+    
+    import bit from "../assets/images/bit.png"
+    import dashBoardView from "../assets/images/dashBoardView.png"
+    import classamigo from "../assets/images/classamigo.png"
 
+    import createCourse from "../assets/images/createCourse.png"
+     
 
 const Projects = () => {
   return (
@@ -46,7 +46,7 @@ const Projects = () => {
 
           <div className="project-images">
             <img src={hotelImage} alt="Hotel management system interface" />
-            <img src={adminDeposit} alt="Hotel admin dashboard view" />
+            
           </div>
         </article>
 
@@ -70,7 +70,7 @@ const Projects = () => {
           </div>
 
           <div className="project-images">
-            <img src={quizAddQuestion} alt="Quiz platform add question page" />
+           
             <img src={quizHome} alt="Quiz platform home page" />
           </div>
         </article>
