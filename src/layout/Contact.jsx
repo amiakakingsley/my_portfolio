@@ -90,12 +90,15 @@ const Contact = () => {
 
         {/* RIGHT: CONTACT FORM */}
         <div className="contact-form-wrapper">
+          
           <form
             ref={formRef}
             onSubmit={sendEmail}
             className="contact-form"
             noValidate
           >
+
+             <h2 className="contact-header">Drop a Message</h2>
             <div className="form-group half">
               <label htmlFor="name">Your Name</label>
               <input id="name" type="text" name="name" required />
