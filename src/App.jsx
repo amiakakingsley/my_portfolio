@@ -3,7 +3,7 @@ import { UserProvider } from "./context/UserContext.jsx";
 import ComponentA from "./Component/ComponentA.jsx";
 import Register from "./Pages/Blogs/Blog.jsx";
 import DisplayBlog from "./Pages/Blogs/DisplayBlog.jsx";
-import Home from "./Pages/home.jsx";
+import Home from "./Pages/Home.jsx";
 import Navbar from "./layout/Navbar.jsx";
 import Contact from "./layout/Contact.jsx";
 
