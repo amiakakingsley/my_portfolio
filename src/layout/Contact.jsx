@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import "./Contact.css";
 import emailjs from '@emailjs/browser';
@@ -37,6 +36,14 @@ const Contact = () => {
           </header>
 
           <address className="contact-details">
+
+             <div className="contact-item">
+              <i className="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                <strong>Phone:</strong> +234 704 651 5316
+              </span>
+            </div>
+
             <div className="contact-item">
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
               <span>
@@ -44,19 +51,14 @@ const Contact = () => {
               </span>
             </div>
 
+
             <div className="contact-item">
-              <i className="fa fa-phone" aria-hidden="true"></i>
+              <i className="fa fa-location-dot" aria-hidden="true"></i>
               <span>
-                <strong>Phone:</strong> +234 704 651 5316
+                <strong>Address:</strong>Freedom Way, Lekki, Lagos, Nigeria
               </span>
             </div>
 
-            <div className="socialMedia">
-              <a href="https://www.facebook.com/"><i className="fa-brands fa-facebook-f"></i></a>
-              <a href="https://wa.me/2347046515316"><i className="fa-brands fa-whatsapp"></i></a>
-              <a href="#"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#"><i className="fa-brands fa-telegram"></i></a>
-            </div>
           </address>
 
           <div className="social-links">
