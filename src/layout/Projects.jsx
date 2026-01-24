@@ -1,3 +1,4 @@
+
 import React from 'react'
 import "./Project.css"
 import hotelImage from "../assets/images/hotel.jpg"
@@ -10,109 +11,166 @@ import classamigo from "../assets/images/classamigo.png"
 
 import createCourse from "../assets/images/createCourse.png"
 
+
 const Projects = () => {
-
-  const bitImaheStyle = {
-    height: "200px",
-    width: "100px",
-    display: "inline-block"
-  }
-
-
   return (
-    <div>
-        <section className="section_4">
-    <h2>Projects I've worked On</h2>
+    <section className="projects-section" id="projects">
+      <header className="section-header">
+        <h2>Projects I’ve Worked On</h2>
+        <p>
+          A selection of full-stack and frontend projects showcasing my skills
+          in Java, Spring Boot, React, and modern web technologies.
+        </p>
+      </header>
 
+      <div className="projects-grid">
 
-    <div className="projects">
-      {/* ........................................ */}
-      <div className='colume'>
-        <div>
-          <h1>A Hotel Management System</h1>
-          <p>A system that manages all the activities that takes place in a hotel organization</p>
-     
-        </div>
-        <div className='images'>
-          <img className='img' src={hotelImage} alt="" />
-          <img className='img' src={adminDeposite} alt="" />
-          
-        </div>
-          <a href="https://github.com/amiakakingsley/Hotel_Management_System">GitHub</a>
+        {/* HOTEL MANAGEMENT SYSTEM */}
+        <article className="project-card">
+          <div className="project-content">
+            <h3>Hotel Management System</h3>
+            <p>
+              A system that manages daily operations within a hotel organization,
+              including administration and transaction handling.
+            </p>
+
+            <a
+              href="https://github.com/amiakakingsley/Hotel_Management_System"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+
+          <div className="project-images">
+            <img src={hotelImage} alt="Hotel management system interface" />
+            <img src={adminDeposit} alt="Hotel admin dashboard view" />
+          </div>
+        </article>
+
+        {/* QUIZ PLATFORM */}
+        <article className="project-card">
+          <div className="project-content">
+            <h3>Quiz Platform</h3>
+            <p>
+              A Spring Boot–based quiz application that allows users to take exams
+              online and receive automated scoring based on performance.
+            </p>
+
+            <a
+              href="https://github.com/amiakakingsley/springQuitProjects/tree/main/src"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+
+          <div className="project-images">
+            <img src={quizAddQuestion} alt="Quiz platform add question page" />
+            <img src={quizHome} alt="Quiz platform home page" />
+          </div>
+        </article>
+
+        {/* CRYPTO DASHBOARD */}
+        <article className="project-card">
+          <div className="project-content">
+            <h3>Crypto Dashboard Web App</h3>
+            <p>
+              A React-based application that displays real-time cryptocurrency
+              data using the CoinGecko API, including price charts and market
+              trends.
+            </p>
+
+            <a
+              href="https://github.com/amiakakingsley/Kings_Cryptos/tree/main/src"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+
+          <div className="project-images small-images">
+            <img src={bit} alt="Cryptocurrency overview card" />
+            <img src={dashBoardView} alt="Crypto dashboard view" />
+          </div>
+        </article>
+
+        {/* SCHOOL MANAGEMENT SYSTEM */}
+        <article className="project-card">
+          <div className="project-content">
+            <h3>School Management Web Application</h3>
+            <p>
+              A role-based school management platform built with Spring Boot and
+              Spring Security, supporting Admin, Tutor, and Student roles.
+            </p>
+
+            <a
+              href="https://github.com/amiakakingsley/ClassAmigo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+
+          <div className="project-images">
+            <img src={classamigo} alt="School management dashboard" />
+            <img src={createCourse} alt="Create course interface" />
+          </div>
+        </article>
+
+        {/* BLOG APPLICATION */}
+        <article className="project-card">
+          <div className="project-content">
+            <h3>Full-Stack Blog Application</h3>
+            <p>
+              A React and Spring Boot blog platform using MongoDB in a Docker
+              container for scalable data storage and retrieval.
+            </p>
+
+            <a
+              href="https://github.com/amiakakingsley/React-SpringBoot-mySql_Docker_container/tree/main/Blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        {/* MONGO CONNECT APP */}
+        <article className="project-card">
+          <div className="project-content">
+            <h3>MongoConnectApp</h3>
+            <p>
+              A Node.js application connected to a MongoDB database running in a
+              Docker container, enabling dynamic data storage and retrieval.
+            </p>
+
+            <a
+              href="https://github.com/amiakakingsley/Connecting-a-node-Application-to-a-docker-mongoDb-Container/blob/main/MongoDb.js"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
       </div>
 
-      {/* ........................................ */}
-       <div className='colume'>
-        <div>
-          <h1>A Quiz Platform</h1>
-          <p>"A Quiz Platform" is a web-based application built with Spring Boot. It allows users to take quizzes or exams online. After completing the quiz, the system automatically scores the participant based on their performance.</p>
-        </div>
-        <div className='images'>
-          <img className='img' src={quizAddQuetion} alt="" />
-          <img className='img' src={quizHome} alt="" />
-        </div>
 
-        <a href="https://github.com/amiakakingsley/springQuitProjects/tree/main/src">GitHub</a>
-      </div> 
-
-
-      {/* ........................................ */}
-       <div className='colume'>
-        <div>
-          <h1>Crypto Dashboard Web App</h1>
-          <p>A React-based web application that provides real-time information on cryptocurrencies using the CoinGecko API. The app displays a list of top cryptocurrencies, price charts, market trends, and allows users to search and view detailed stats for each coin.</p>
-     
-        </div>
-        <div className='images'>
-          <img style={bitImaheStyle} src={bit} alt="" />
-          <img style={bitImaheStyle} src={dashBoardView} alt="" />
-          
-        </div>
-          <a href="https://github.com/amiakakingsley/Kings_Cryptos/tree/main/src">GitHub</a>
-      </div>
-  
-      <div className='colume'>
-        <div>
-          <h1>School Management Web Application</h1>
-          <p>This wep  App is built to manage the daily operations of an educational institution. It's built using Spring Boot for the backend and uses Spring Security to control access to features based on user roles.The platform supports three main types of users, Admin, Tutor and Student Roles</p>
-       
-        </div>
-        <div className='images'>
-          <img className='img' src={classamigo} alt="" />
-           <img className='img' src={createCourse} alt="" />
-        </div>
-
-           <a href="https://github.com/amiakakingsley/ClassAmigo">View gitHub Repository</a>
-      </div>
-      
-       <div className='colume'>
-        <div>
-          <h1>A Blog Application</h1>
-          <p>This is a full-stack blog application built using React for the frontend and Spring Boot for the backend. The application uses MongoDB as its database, which runs inside a Docker container.
-</p>
-          <a href="https://github.com/amiakakingsley/React-SpringBoot-mySql_Docker_container/tree/main/Blog">View gitHub Repository</a>
-        </div>
-        <div className='images'>
-          <img  alt="" />
-        </div>
-      </div> <div className='colume'>
-        <div>
-          <h1>MongoConnectApp</h1>
-          <p>An application built with Node.js, HTML, and CSS that connects to a MongoDB database running in a Docker container to store and retrieve data dynamically from a web interface.</p>
-          <a href="https://github.com/amiakakingsley/Connecting-a-node-Application-to-a-docker-mongoDb-Container/blob/main/MongoDb.js">View gitHub Repository</a>
-        </div>
-        <div className='images'>
-          <img  alt="" />
-        </div>
-      </div>
-      <div ><button className='btn'>view more</button></div>
-    </div>
-
-  </section>
-
-
-    </div>
-  )
-}
+    </section>
+  );
+};
 
 export default Projects 

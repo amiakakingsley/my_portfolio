@@ -1,68 +1,54 @@
+
 import React, { useRef } from 'react';
 import "./Contact.css";
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const form = useRef();
+  const formRef = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_w6bnf5c', 'template_ouryl4y', form.current, {
-        publicKey: 'rrpe9LSJxDkSQj6pM',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          alert('Message sent successfully!');
-          form.current.reset(); // clear form
-        },
-        (error) => {
-          console.error('FAILED...', error.text);
-          alert('Failed to send message. Try again later.');
-        },
-      );
+    emailjs.sendForm(
+      "service_w6bnf5c",
+      "template_ouryl4y",
+      formRef.current,
+      { publicKey: "rrpe9LSJxDkSQj6pM" }
+    ).then(
+      () => {
+        alert("Message sent successfully!");
+        formRef.current.reset();
+      },
+      () => {
+        alert("Failed to send message. Please try again later.");
+      }
+    );
   };
 
   return (
-    <div className="contact">
-      <div className="container">
-        <main className="row">
-          <section className="col left">
-            <div className="contactTitle">
-              <h2>Get In Touch with me</h2>
-              <p>I will help you connect to the World</p>
+    <section className="contact-section" id="contact">
+      <div className="contact-container">
+
+        {/* LEFT: CONTACT INFO */}
+        <div className="contact-info">
+          <header className="contact-header">
+            <h2>Get in Touch</h2>
+            <p>I’ll help you connect your ideas to the world.</p>
+          </header>
+
+          <address className="contact-details">
+            <div className="contact-item">
+              <i className="fa-regular fa-envelope" aria-hidden="true"></i>
+              <span>
+                <strong>Email:</strong> kingsleyamiaka01@gmail.com
+              </span>
             </div>
 
-            <div className="contactInfo">
-              <div className="iconGroup">
-                <div className="icon">
-                  <i className="fa-regular fa-envelope"></i>
-                </div>
-                <div className="details">
-                  <span>Email:</span>
-                  <span>kingsleyamiaka01@gmail.com</span>
-                </div>
-              </div>
-              <div className="iconGroup">
-                <div className="icon">
-                  <i className="fa fa-phone"></i>
-                </div>
-                <div className="details">
-                  <span>Phone No:</span>
-                  <span>+2347046515316</span>
-                </div>
-              </div>
-              <div className="iconGroup">
-                <div className="icon">
-                  <i className="fa-regular fa-address-book" aria-hidden="true"></i>
-                </div>
-                <div className="details">
-                  <span>Address:</span>
-                  <span>Abuja, Nigeria</span> {/* Replace or remove if not needed */}
-                </div>
-              </div>
+            <div className="contact-item">
+              <i className="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                <strong>Phone:</strong> +234 704 651 5316
+              </span>
             </div>
 
             <div className="socialMedia">
@@ -71,38 +57,80 @@ const Contact = () => {
               <a href="#"><i className="fa-brands fa-instagram"></i></a>
               <a href="#"><i className="fa-brands fa-telegram"></i></a>
             </div>
-          </section>
+          </address>
 
-          <section className="col right">
-            <form ref={form} onSubmit={sendEmail} className="messageForm">
-              <div className="inputGroup halfWidth">
-                <input type="text" name="name" required />
-                <label>Your Name</label>
-              </div>
+          <div className="social-links">
+            <a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i className="fa-brands fa-facebook-f"></i>
+            </a>
 
-              <div className="inputGroup halfWidth">
-                <input type="email" name="send_emial" required />
-                <label>Email</label>
-              </div>
+            <a
+              href="https://wa.me/2347046515316"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i className="fa-brands fa-whatsapp"></i>
+            </a>
 
-              <div className="inputGroup fullWidth">
-                <input type="text" name="title" required />
-                <label>Subject</label>
-              </div>
+            <a href="#" aria-label="Instagram">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
 
-              <div className="inputGroup fullWidth">
-                <textarea name="message" required></textarea>
-                <label className='textArea-label'>Say Something</label>
-              </div>
+            <a href="#" aria-label="Telegram">
+              <i className="fa-brands fa-telegram"></i>
+            </a>
+          </div>
+        </div>
 
-              <div className="inputGroup fullWidth">
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </section>
-        </main>
+        {/* RIGHT: CONTACT FORM */}
+        <div className="contact-form-wrapper">
+          <form
+            ref={formRef}
+            onSubmit={sendEmail}
+            className="contact-form"
+            noValidate
+          >
+            <div className="form-group half">
+              <label htmlFor="name">Your Name</label>
+              <input id="name" type="text" name="name" required />
+            </div>
+
+            <div className="form-group half">
+              <label htmlFor="email">Email</label>
+              <input id="email" type="email" name="email" required />
+            </div>
+
+            <div className="form-group full">
+              <label htmlFor="subject">Subject</label>
+              <input id="subject" type="text" name="title" required />
+            </div>
+
+            <div className="form-group full">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <div className="form-group full">
+              <button type="submit" className="btn-primary">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

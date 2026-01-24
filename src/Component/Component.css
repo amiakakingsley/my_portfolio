@@ -1,10 +1,125 @@
-.box{
-    border: 3px solid black;
-    padding: 5px;
-    max-width: 600px;
-    margin: 10px auto;
-    text-align: center;
+/* Component.css */
+
+/* -----------------------
+   VARIABLES
+------------------------ */
+:root {
+  --primary-color: #ff4c29;
+  --secondary-color: #1a1a1a;
+  --bg-color: #fff;
+  --card-bg: #fdfdfd;
+  --text-color: #333;
+  --input-bg: #f4f4f4;
+  --transition: 0.3s ease-in-out;
+  --shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
-.content{
-    margin-top: 100px;
+
+/* -----------------------
+   GENERAL CARD STYLE
+------------------------ */
+.card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.card h1, .card h2, .card h3 {
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.card h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.card h3 {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* -----------------------
+   FORM STYLING
+------------------------ */
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: var(--input-bg);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(255,76,41,0.3);
+}
+
+.form-group input[type="submit"] {
+  padding: 0.6rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.form-group input[type="submit"]:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* -----------------------
+   NESTED COMPONENT SPACING
+------------------------ */
+.card > .card {
+  margin-top: 1.5rem;
+}
+
+/* -----------------------
+   RESPONSIVE
+------------------------ */
+@media (max-width: 768px) {
+  .form-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .card h1 {
+    font-size: 1.2rem;
+  }
+  .card h2 {
+    font-size: 1rem;
+  }
+  .card h3 {
+    font-size: 0.9rem;
+  }
 }

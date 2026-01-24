@@ -1,27 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import "./Component.css"
-import ComponentC from "./ComponentC.jsx"
-import { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import {UserContext} from '../context/UserContext.jsx'
-
+import React, { useEffect, useState, useContext } from "react";
+import ComponentC from "./ComponentC.jsx";
+import { UserContext } from "../context/UserContext.jsx";
+import "./Component.css";
 
 function ComponentB() {
+  const { email } = useContext(UserContext);
+  const [message, setMessage] = useState("No Email Available");
 
-  const {email} = useContext(UserContext);
-  const [message, setMessage] = useState("No Email Available")
-  
+  useEffect(() => {
+    if (email) setMessage("Your Email is");
+  }, [email]);
 
-  useEffect(()=>{
-     setMessage("Your Email is")
-  },[email])
   return (
-    <div className='box'>
-        <h2>ComponentB </h2>
-        <h3>{message} {email}</h3>
-        <ComponentC />
+    <div className="card">
+      <h1>ComponentB</h1>
+      <h2>{message} {email}</h2>
+      <ComponentC />
     </div>
-  )
+  );
 }
 
-export default ComponentB
+export default ComponentB;

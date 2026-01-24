@@ -1,103 +1,185 @@
-.section_4{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+/* Projects.css */
 
-    max-width: 900px;
-    margin: 17px auto;
-   
-
+/* -----------------------
+   VARIABLES
+------------------------ */
+:root {
+  --primary-color: #ff4c29;
+  --secondary-color: #1a1a1a;
+  --bg-color: #fff;
+  --text-color: #333;
+  --transition: 0.3s ease-in-out;
 }
 
-.section_4 h2{
-    font-size: 30px;
-    text-decoration: underline;
-    margin: 20px;
-
-}
-.projects{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    column-gap: 10px;
-    row-gap: 10px;
-    max-width: 900px;
-    margin: 17px auto;
+/* -----------------------
+   PROJECTS SECTION
+------------------------ */
+.projects-section {
+  padding: 4rem 10%;
+  background-color: #f8f8f8;
 }
 
-.colume{
-   text-align: center;
-    border: 0.5px solid yellowgreen;
-    padding: 10px;
+.projects-section .section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
-.colume h1{
-    font-size: 30px;
-    color: rgba(178, 49, 49, 0.428);
+.projects-section .section-header h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
-.images{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-
+.projects-section .section-header p {
+  font-size: 1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.images .img{
-    width: 100px;
-    height: 80px;
-    transition: 1s;
-    margin: 5px;
+/* -----------------------
+   PROJECTS GRID
+------------------------ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.images img:hover{
-  width: 250px;
-  height: 150px;
-}
-.colume a{
-    color: blue;
-    text-decoration: underline;
-    text-align: left;
-}
-
-.btn{
-    background-color: yellow;
-    width: 130px;
-    border-radius: 20px;
-    color: black;
-    padding: 7px;
-    font-size: 17px;
-    border: none;
-    font-weight: 900;
+/* -----------------------
+   PROJECT CARD
+------------------------ */
+.project-card {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
 }
 
-@media (max-width: 900px) {
-    .projects{
-    grid-template-columns: 1fr 1fr;
-    }
-
-    .section_4{
-   padding: 10px;
-}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 700px) {
-    
-    .projects{
-    grid-template-columns: 1fr ;
-    }
-    
-    .images .img{
-    min-width:  300px;
-    min-height: 200px;
-    margin: 5px;
-    display: inline-block;
+/* -----------------------
+   PROJECT CONTENT
+------------------------ */
+.project-content {
+  padding: 1.5rem;
 }
 
-.images{
- flex-direction: column;
- align-items: center;
-
+.project-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
 }
 
+.project-content p {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.project-link:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* -----------------------
+   PROJECT IMAGES
+------------------------ */
+.project-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.project-images img {
+  width: calc(50% - 0.25rem);
+  border-radius: 6px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.project-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Smaller images (optional for Crypto Dashboard) */
+.project-images.small-images img {
+  width: 100px;
+  height: 100px;
+}
+
+/* -----------------------
+   VIEW MORE BUTTON
+------------------------ */
+.projects-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.projects-cta .btn {
+  padding: 0.8rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.projects-cta .btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* -----------------------
+   RESPONSIVE
+------------------------ */
+@media (max-width: 1024px) {
+  .project-images img {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-images img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+
+  .project-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
