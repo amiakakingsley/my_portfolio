@@ -40,14 +40,14 @@ const Contact = () => {
              <div className="contact-item">
               <i className="fa fa-phone" aria-hidden="true"></i>
               <span>
-                <strong>Phone:</strong> +234 704 651 5316
+                <strong>Phone:</strong> +2347046515316
               </span>
             </div>
 
             <div className="contact-item">
               <i className="fa-regular fa-envelope" aria-hidden="true"></i>
               <span>
-                <strong>Email:</strong> kingsleyamiaka01@gmail.com
+                <strong>Email:</strong> kingsleyamiaka@gmail.com
               </span>
             </div>
 
@@ -55,7 +55,7 @@ const Contact = () => {
             <div className="contact-item">
               <i className="fa fa-location-dot" aria-hidden="true"></i>
               <span>
-                <strong>Address:</strong>Freedom Way, Lekki, Lagos, Nigeria
+                <strong>Address:</strong> Aba, Abia State, Nigeria
               </span>
             </div>
 
