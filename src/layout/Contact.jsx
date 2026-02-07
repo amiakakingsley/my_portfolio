@@ -55,22 +55,13 @@ const Contact = () => {
             <div className="contact-item">
               <i className="fa fa-location-dot" aria-hidden="true"></i>
               <span>
-                <strong>Address:</strong> Aba, Abia State, Nigeria
+                <strong>Address:</strong> Freedom way, Lekki, Logos State, Nigeria
               </span>
             </div>
 
           </address>
 
           <div className="social-links">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i className="fa-brands fa-facebook-f"></i>
-            </a>
-
             <a
               href="https://wa.me/2347046515316"
               target="_blank"
@@ -80,13 +71,23 @@ const Contact = () => {
               <i className="fa-brands fa-whatsapp"></i>
             </a>
 
-            <a href="#" aria-label="Instagram">
-              <i className="fa-brands fa-instagram"></i>
-            </a>
+           <a href="https://www.linkedin.com/in/amiaka-kingsley-990bb02a0"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
+              <i className="fa-brands fa-linkedin"></i>
+              </a>
 
-            <a href="#" aria-label="Telegram">
+              <a
+              href="https://t.me/your-telegram-username"
+              aria-label="Telegram"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
               <i className="fa-brands fa-telegram"></i>
-            </a>
+              </a>
+
           </div>
         </div>
 
