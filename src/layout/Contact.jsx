@@ -114,7 +114,7 @@ const Contact = () => {
 
             <div className="form-group full">
               <label htmlFor="subject">Subject</label>
-              <input id="subject" type="text" name="title" required />
+              <input id="subject" type="text" name="subject" required />
             </div>
 
             <div className="form-group full">
