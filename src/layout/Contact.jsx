@@ -8,15 +8,32 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const form = formRef.current;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+      if (!name || !email || !subject || !message) { 
+        alert("All fields are required.");
+        return;
+      } 
+
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+      }
+
+
     emailjs.sendForm(
       "service_w6bnf5c",
       "template_ouryl4y",
-      formRef.current,
+      form,
       { publicKey: "rrpe9LSJxDkSQj6pM" }
     ).then(
       () => {
         alert("Message sent successfully!");
-        formRef.current.reset();
+        form.reset();
       },
       () => {
         alert("Failed to send message. Please try again later.");
