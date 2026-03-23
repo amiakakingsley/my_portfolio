@@ -72,7 +72,7 @@ const Contact = () => {
             <div className="contact-item">
               <i className="fa fa-location-dot" aria-hidden="true"></i>
               <span>
-                <strong>Address:</strong> Freedom way, Lekki, Lagos State, Nigeria
+                <strong>Address:</strong> Aba, Abia State Nigeria
               </span>
             </div>
 
